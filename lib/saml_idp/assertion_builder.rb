@@ -52,7 +52,8 @@ module SamlIdp
               confirmation.SubjectConfirmationData "", confirmation_hash
             end
           end
-          assertion.Conditions NotBefore: not_before, NotOnOrAfter: not_on_or_after_condition do |conditions|
+          #assertion.Conditions NotBefore: not_before, NotOnOrAfter: not_on_or_after_condition do |conditions|
+          assertion.Conditions do |conditions|
             conditions.AudienceRestriction do |restriction|
               restriction.Audience audience_uri
             end
