@@ -60,7 +60,7 @@ module SamlIdp
     end
 
     def acs_url
-      service_provider.acs_url ||
+      # service_provider.acs_url ||
         authn_request["AssertionConsumerServiceURL"].to_s
     end
 
